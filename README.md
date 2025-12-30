@@ -43,14 +43,14 @@ Open Intellij, add this project and go to the main class, then click the run but
 
 
 E. Reflection Section 
-the Vehicle superclass. Instead of redefining fields like brand and year or the displayInfo() method in every class, they are inherited by Car, Motorcycle, and Truck .
+Inheritance simplified the design of my code, It makes it more organized. Instead of redefining fields like brand and year or the displayInfo() method in every classes, they are inherited by subclasses (Car, Truck, Motorcycle).
 It allows me to save time during program 
-development by basing new classes on existing 
-proven and debugged high-quality software. 
+development and help to avoid redundency. 
 
-Method overriding allowed each subclass to provide a specific implementation for the abstract startEngine() and stopEngine() methods defined in the superclass. While every vehicle "starts," the actual behavior is different: a Car might "ignite the engine with a key," while a Motorcycle might "kickstart the engine". Overriding ensures that when the loop calls startEngine(), the program executes the version of the method specific to that object's actual type.
+The Method overriding helped customize behavior by allowing each subclass to implement its own version of startEngine() and stopEngine().
 
-
-One of the primary challenges with protected access is maintaining strict encapsulation; while it allows subclasses to access fields directly, it also opens those fields to any class within the same package, which can lead to unintended side effects.
+One of the challenges was understanding access modifiers, especially protected and default. Protected allows subclasses to access fields directly, but it can be confusing because the field is still hidden from other classes.
+Default access works only inside the same package, so if classes are moved to different packages, access errors can occur.
+This required strict plan of where fields and methods should be used and declared.
 
 
